@@ -1,0 +1,6 @@
+{
+  "name": "AetherIndex — 3D AI Tool Directory & Productivity Platform",
+  "description": "Discover the right AI tool for every task. Explore curated AI software, compare options side by side, and use free interactive productivity utilities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
