@@ -47,7 +47,7 @@ function resolveBuildSiteUrl(env: Record<string, string | undefined>): string {
       }
     }
   }
-  return 'http://localhost:3000';
+  return'https://aitoolkit-hub.netlify.app';
 }
 
 function resolveBuildVerificationToken(env: Record<string, string | undefined>): string {
