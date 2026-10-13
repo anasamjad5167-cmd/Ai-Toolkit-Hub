@@ -1019,6 +1019,14 @@ export const GUIDE_ARTICLES: GuideArticle[] = [
         heading: '3. Evaluating Total Cost and Lock-In',
         body: 'Check whether a tool exports standard, portable file formats—such as Markdown, SVG, CSV, or standard Git commits—so your work remains accessible even if you change tools in the future.',
       },
+      {
+        heading: '4. Run a Repeatable Tool Evaluation',
+        body: 'Choose one real task you perform every week and run the same test in each candidate tool. Record setup time, output quality, editing effort, collaboration features, export options, and the time needed to verify results. Compare the total workflow—not just the most impressive demo—and repeat the test with a second task before paying.',
+      },
+      {
+        heading: '5. A Practical Subscription Checklist',
+        body: 'Before subscribing, write down the job the tool will own, who needs access, what data you will upload, the monthly cost at your expected usage, and how you will export your work. Set a reminder before a trial ends. If another tool already handles the same job well, cancel or downgrade the overlap instead of accumulating subscriptions.',
+      },
     ],
   },
   {
@@ -1045,6 +1053,14 @@ export const GUIDE_ARTICLES: GuideArticle[] = [
       {
         heading: '2. Using the Free Prompt Generator Utility',
         body: 'You can assemble structured prompts directly on AI Toolkit Hub using our free client-side Prompt Generator utility, which formats your domain, tone, task objective, and guardrails into a reusable template.',
+      },
+      {
+        heading: '3. Copy-and-Adapt Prompt Example',
+        body: 'Try this reusable structure: “You are helping [audience] with [task]. Use the source material below. Prioritize [criteria]. Do not invent facts or citations; identify missing information. Return [format] with [required fields]. Before answering, check the result against [success criteria].” Replace each bracket with concrete details and provide source material separately from the instruction.',
+      },
+      {
+        heading: '4. Improve Results in One Iteration',
+        body: 'If the first answer misses the mark, identify the exact failure—too broad, missing evidence, wrong tone, or incorrect format—and change that constraint rather than rewriting the entire prompt. For factual work, ask the model to flag uncertainty and verify important claims against primary sources. For structured outputs, validate the result before using it in another system.',
       },
     ],
   },
@@ -1073,6 +1089,14 @@ export const GUIDE_ARTICLES: GuideArticle[] = [
         heading: '2. Discovering External Literature',
         body: 'When starting a new literature review, you first need to discover what research exists. Academic search tools index scholarly databases to help you locate relevant papers, filter by study design, and export citations into reference managers like Zotero.',
       },
+      {
+        heading: '3. A Simple Research Workflow',
+        body: 'Start by writing a focused research question and listing the population, intervention or topic, comparison, and outcome where relevant. Use an academic discovery engine to find candidate papers, screen titles and abstracts against your criteria, then open the full text for studies that fit. Record the date searched, search terms, inclusion criteria, and reasons for exclusions so the process can be repeated.',
+      },
+      {
+        heading: '4. Verify Before You Cite',
+        body: 'Treat AI summaries as a map to the evidence, not as the evidence itself. Open the original paper, confirm the study design and sample, distinguish correlation from causation, and check whether the conclusion matches the reported results. If a tool cannot provide a traceable citation or the cited passage does not support the claim, do not rely on that claim.',
+      },
     ],
   },
 ];
@@ -1097,6 +1121,14 @@ export const BLOG_POSTS: BlogPost[] = [
         heading: 'How Client-Side Execution Works on AI Toolkit Hub',
         body: 'All six free utilities on AI Toolkit Hub—including the JSON Formatter, Password Generator, and Word Counter—run entirely in your browser using standard JavaScript and the Web Crypto API (`window.crypto.getRandomValues`). Your text inputs and generated passwords are processed in local device memory without being sent to a backend server.',
       },
+      {
+        heading: '3. Good Habits for Sensitive Data',
+        body: 'Local processing reduces the need to send utility input to a server, but it does not make every browser session risk-free. Keep your browser and device updated, avoid pasting production secrets into unfamiliar pages, review extensions that can read page content, and clear sensitive text when finished. For highly confidential data, follow your organization’s approved security workflow.',
+      },
+      {
+        heading: '4. Choose the Right Utility',
+        body: 'Use the JSON Formatter to inspect structure and syntax, the Password Generator to create random credentials, and the Word Counter to check text length. Open the free browser utilities from the site navigation. Never reuse generated passwords across accounts, and store credentials in a reputable password manager.',
+      },
     ],
   },
   {
@@ -1118,6 +1150,14 @@ export const BLOG_POSTS: BlogPost[] = [
         heading: 'Always Verify Current Vendor Pricing',
         body: 'Because software companies frequently adjust credit allowances, model tiers, and subscription prices, treat directory listings as an initial starting point and always confirm current pricing and terms on the official provider’s website before purchasing.',
       },
+      {
+        heading: '3. Calculate the Cost of Your Actual Workload',
+        body: 'Estimate how many users need access, how often they will use the product, and whether your workload consumes messages, credits, seats, or storage. Include add-ons, taxes, overage charges, and the time spent managing separate tools. A plan with a low entry price may cost more at realistic usage than a higher-priced plan with the features your team needs.',
+      },
+      {
+        heading: '4. Compare Plans Fairly',
+        body: 'Use the same representative task and quality bar when testing free and paid tiers. Note usage limits, collaboration controls, export options, data-handling terms, and cancellation rules. Recheck the vendor’s official pricing page before making a decision because plan names, allowances, and features can change.',
+      },
     ],
   },
   {
@@ -1138,6 +1178,14 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: 'Supporting prefers-reduced-motion',
         body: 'Users who enable reduced motion in their operating system settings—or who toggle Static Mode in our header—receive a calm, static interface with continuous 3D animations and parallax disabled.',
+      },
+      {
+        heading: '3. Keyboard and Focus Testing',
+        body: 'Test the full page without a mouse: move through links, buttons, filters, and dialogs with the keyboard and make sure focus remains visible. Use semantic buttons for actions and links for navigation, give controls accessible names, and confirm that opening a dialog does not strand keyboard users behind it.',
+      },
+      {
+        heading: '4. A Quick Accessibility Review',
+        body: 'Check text and control contrast, zoom the page to 200%, inspect heading order, and verify that important information is not communicated by color or motion alone. Decorative 3D effects should remain secondary to readable content, and reduced-motion preferences should be respected without removing essential functionality.',
       },
     ],
   },
