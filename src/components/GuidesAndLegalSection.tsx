@@ -153,14 +153,17 @@ export const GuidesAndLegalSection: React.FC<GuidesAndBlogSectionProps> = ({
                   </div>
                   <div className="flex flex-wrap items-center gap-2">
                     {relatedGuideTools.map((tool) => (
-                      <button
+                      <a
                         key={tool.id}
-                        type="button"
-                        onClick={() => onInspectTool(tool)}
-                        className="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 hover:bg-slate-800 text-sky-300 border border-slate-700/80 transition-colors cursor-pointer"
+                        href={`/ai-tools/${tool.id}`}
+                        onClick={(event) => {
+                          event.preventDefault();
+                          onInspectTool(tool);
+                        }}
+                        className="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 hover:bg-slate-800 text-sky-300 border border-slate-700/80 transition-colors"
                       >
                         {tool.name} ({tool.category})
-                      </button>
+                      </a>
                     ))}
                     <button
                       type="button"
@@ -270,14 +273,17 @@ export const GuidesAndLegalSection: React.FC<GuidesAndBlogSectionProps> = ({
                   </div>
                   <div className="flex flex-wrap items-center gap-2">
                     {relatedBlogTools.map((tool) => (
-                      <button
+                      <a
                         key={tool.id}
-                        type="button"
-                        onClick={() => onInspectTool(tool)}
-                        className="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 hover:bg-slate-800 text-sky-300 border border-slate-700/80 transition-colors cursor-pointer"
+                        href={`/ai-tools/${tool.id}`}
+                        onClick={(event) => {
+                          event.preventDefault();
+                          onInspectTool(tool);
+                        }}
+                        className="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 hover:bg-slate-800 text-sky-300 border border-slate-700/80 transition-colors"
                       >
                         {tool.name}
-                      </button>
+                      </a>
                     ))}
                     <a
                       href="/free-tools"
