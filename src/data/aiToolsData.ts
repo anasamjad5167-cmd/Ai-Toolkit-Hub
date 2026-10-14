@@ -825,7 +825,7 @@ export const AI_TOOLS: AITool[] = [
     name: 'ElevenLabs',
     tagline: 'AI voice generation and a Studio workspace for narration, audiobooks, podcasts, and video voiceovers.',
     description:
-      'ElevenLabs provides text-to-speech voice generation and a Studio workspace for creating audio and video projects. Use it to prepare long-form narration, organize voice tracks with music or sound effects, and build video voiceovers with timeline editing. Developers can also connect speech generation to applications through its API.'
+      'ElevenLabs provides text-to-speech voice generation and a Studio workspace for creating audio and video projects. Use it to prepare long-form narration, organize voice tracks with music or sound effects, and build video voiceovers with timeline editing. Developers can also connect speech generation to applications through its API.',
     category: 'Audio',
     pricing: 'Freemium',
     freePlanAvailable: 'Yes (Free tier with monthly character quota)',
