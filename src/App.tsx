@@ -229,8 +229,14 @@ export default function App() {
         { label: activeToolDetail.name, path: `/ai-tools/${activeToolDetail.id}` },
       ];
       return {
-        title: `${activeToolDetail.name} — Features, Pricing Model & Alternatives | AI Toolkit Hub`,
-        description: `${activeToolDetail.name}: ${activeToolDetail.tagline} Explore supported platforms, free-plan availability, limitations, and related ${activeToolDetail.category} tools.`,
+        title:
+          activeToolDetail.id === 'elevenlabs-studio'
+            ? 'ElevenLabs Studio: AI Voiceovers & Audio Tools | AI Toolkit Hub'
+            : `${activeToolDetail.name} — Features, Pricing Model & Alternatives | AI Toolkit Hub`,
+        description:
+          activeToolDetail.id === 'elevenlabs-studio'
+            ? 'Explore ElevenLabs Studio for AI voiceovers, audiobooks, podcasts, and video audio. See how to start, key features, free-plan limits, and alternatives.'
+            : `${activeToolDetail.name}: ${activeToolDetail.tagline} Explore supported platforms, free-plan availability, limitations, and related ${activeToolDetail.category} tools.`,
         path: `/ai-tools/${activeToolDetail.id}`,
         breadcrumbs: crumbs,
         ogType: 'website' as const,
@@ -636,7 +642,9 @@ export default function App() {
                       <span>{activeToolDetail.apiAvailable ? 'API Available' : 'Web / App'}</span>
                     </div>
                     <h1 className="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight">
-                      {activeToolDetail.name}
+                      {activeToolDetail.id === 'elevenlabs-studio'
+                        ? 'ElevenLabs Studio'
+                        : activeToolDetail.name}
                     </h1>
                   </div>
                 </div>
@@ -738,6 +746,75 @@ export default function App() {
                   </ul>
                 </div>
               </div>
+
+              {activeToolDetail.id === 'elevenlabs-studio' && (
+                <section
+                  aria-labelledby="elevenlabs-getting-started"
+                  className="space-y-5 border-t border-slate-800 pt-6"
+                >
+                  <div className="space-y-2">
+                    <h2
+                      id="elevenlabs-getting-started"
+                      className="font-display text-xl font-bold text-white"
+                    >
+                      How to Get Started with ElevenLabs Studio
+                    </h2>
+                    <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+                      ElevenLabs Studio is designed for creating and editing audio or video projects.
+                      It can help with long-form narration, audiobooks, podcasts, and video voiceovers.
+                    </p>
+                  </div>
+                  <ol className="list-decimal pl-5 space-y-3 text-sm text-slate-300 leading-relaxed">
+                    <li>
+                      <strong className="text-white">Choose a project:</strong> Open Studio and start
+                      an audio or video project, use an inspiration, upload a supported file, or begin
+                      with a blank project.
+                    </li>
+                    <li>
+                      <strong className="text-white">Prepare your script:</strong> Add or edit the
+                      narration text. For clearer speech, spell out unusual abbreviations and review
+                      names, numbers, and punctuation before generating audio.
+                    </li>
+                    <li>
+                      <strong className="text-white">Select a voice and refine the timeline:</strong>
+                      Preview the voice, adjust available settings, and arrange narration, music,
+                      sound effects, or video clips where the project supports them.
+                    </li>
+                    <li>
+                      <strong className="text-white">Preview and export:</strong> Listen or watch the
+                      result, correct pronunciation or timing issues, then export the finished project.
+                      Check the current plan and usage terms before producing larger projects.
+                    </li>
+                  </ol>
+                  <div className="rounded-xl border border-slate-800 bg-slate-900/70 p-4 space-y-2">
+                    <h3 className="text-sm font-semibold text-white">Things to check before choosing it</h3>
+                    <ul className="list-disc pl-5 space-y-1.5 text-sm text-slate-300">
+                      <li>Free-plan credits and export options can differ from paid plans and may change.</li>
+                      <li>Regenerating audio can use additional credits, so proofread the script first.</li>
+                      <li>Only upload media and use voices you have permission to use; check commercial-use terms for your plan.</li>
+                    </ul>
+                    <p className="text-sm">
+                      <a
+                        href="https://elevenlabs.io/docs/eleven-creative/products/studio"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sky-300 hover:text-sky-200 underline underline-offset-4"
+                      >
+                        Read the official Studio guide
+                      </a>
+                      <span className="text-slate-500"> · </span>
+                      <a
+                        href="https://elevenlabs.io/pricing"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sky-300 hover:text-sky-200 underline underline-offset-4"
+                      >
+                        Check current pricing
+                      </a>
+                    </p>
+                  </div>
+                </section>
+              )}
 
               {/* Internal Linking: Related AI Tools & Related Guides (Section 50) */}
               <div className="pt-6 border-t border-slate-800 grid grid-cols-1 md:grid-cols-2 gap-6">
