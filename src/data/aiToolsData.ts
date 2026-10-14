@@ -823,9 +823,9 @@ export const AI_TOOLS: AITool[] = [
   {
     id: 'elevenlabs-studio',
     name: 'ElevenLabs',
-    tagline: 'Text-to-speech synthesis, voice design, and multilingual audio dubbing platform.',
+    tagline: 'AI voice generation and a Studio workspace for narration, audiobooks, podcasts, and video voiceovers.',
     description:
-      'Generates spoken audio from text scripts for narration, accessibility readers, audiobooks, and conversational voice interfaces, with developer API support.',
+      'ElevenLabs provides text-to-speech voice generation and a Studio workspace for creating audio and video projects. Use it to prepare long-form narration, organize voice tracks with music or sound effects, and build video voiceovers with timeline editing. Developers can also connect speech generation to applications through its API.'
     category: 'Audio',
     pricing: 'Freemium',
     freePlanAvailable: 'Yes (Free tier with monthly character quota)',
@@ -839,7 +839,7 @@ export const AI_TOOLS: AITool[] = [
     documentationNote: 'Detailed API reference, SDKs, and voice cloning safety guidelines.',
     strengths: [
       'Natural pacing and intonation across multiple supported languages',
-      'Multi-track Studio editor for long-form audiobook and narration scripts',
+      'Studio timeline workflows for long-form narration, audiobooks, podcasts, and supported video projects',
       'Low-latency streaming API for voice applications',
     ],
     limitations: [
