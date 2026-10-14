@@ -8,6 +8,8 @@
  *   is provided. Placeholder tokens are strictly ignored.
  */
 
+import { AI_TOOLS } from '../data/aiToolsData';
+
 const PLACEHOLDER_PATTERNS = [
   'my_site_url',
   'your_site_url',
@@ -122,7 +124,16 @@ export function getOgImageUrl(baseOverride?: string): string {
 
 export function generateSitemapXml(baseOverride?: string): string {
   const base = (baseOverride || resolveSiteUrl()).replace(/\/+$/, '');
-  const urlEntries = INDEXABLE_ROUTES.map((route) => {
+  // Include every individual tool detail URL as well as the main site pages.
+  const routes = [
+    ...INDEXABLE_ROUTES,
+    ...AI_TOOLS.map((tool) => ({
+      path: `/ai-tools/${tool.id}`,
+      changefreq: 'weekly' as const,
+      priority: '0.7',
+    })),
+  ];
+  const urlEntries = routes.map((route) => {
     const loc = getCanonicalUrl(route.path, base);
     return [
       '  <url>',
