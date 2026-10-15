@@ -177,6 +177,37 @@ export const CATEGORIES: CategoryMeta[] = [
 export const AI_TOOLS: AITool[] = [
   // WRITING
   {
+    id: 'chatgpt',
+    name: 'ChatGPT',
+    tagline: 'AI assistant for writing, brainstorming, learning, coding, and everyday problem-solving.',
+    description:
+      'ChatGPT by OpenAI can help draft and revise text, explain concepts, brainstorm ideas, work through coding questions, summarize supplied material, and analyze supported files. Available tools and usage limits depend on the account, region, workspace settings, and current plan.',
+    category: 'Productivity',
+    pricing: 'Freemium',
+    freePlanAvailable: 'Yes (Free plan with feature and usage limits)',
+    pricingTransparencyNote: 'OpenAI lists Free and paid plans; features, limits, and availability can change. Check the official pricing page for current details.',
+    featured: true,
+    url: 'https://chatgpt.com/',
+    primaryUseCase: 'General-Purpose AI Assistance',
+    supportedPlatforms: 'Web, iOS, Android, desktop apps where available',
+    contextOrSpec: 'Conversational assistant with optional tools and file workflows',
+    apiAvailable: true,
+    documentationNote: 'Official Help Center and OpenAI API documentation are available online.',
+    strengths: [
+      'Useful for drafting, rewriting, brainstorming, and adapting content to a requested tone',
+      'Can explain concepts step by step and help explore coding or data questions',
+      'Supports iterative conversations and, depending on plan and availability, additional tools such as file analysis or image features',
+    ],
+    limitations: [
+      'Can produce incorrect or outdated answers, so verify important facts and citations',
+      'Free-plan limits and access to specific models or tools can change',
+      'Avoid sharing passwords, private personal data, or confidential information unless you understand the applicable data controls and policies',
+    ],
+    integrations: ['OpenAI API', 'Available connected apps and tools vary by plan and settings'],
+    relatedToolIds: ['claude-workspace', 'perplexity-pro', 'notebooklm-study'],
+    relatedGuideIds: ['guide-structured-prompting', 'guide-evaluating-ai-stack'],
+  },
+  {
     id: 'claude-workspace',
     name: 'Claude',
     tagline: 'Conversational AI assistant for drafting, document analysis, and interactive artifacts.',

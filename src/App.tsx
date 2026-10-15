@@ -232,11 +232,15 @@ export default function App() {
         title:
           activeToolDetail.id === 'elevenlabs-studio'
             ? 'ElevenLabs Studio: AI Voiceovers & Audio Tools | AI Toolkit Hub'
-            : `${activeToolDetail.name} — Features, Pricing Model & Alternatives | AI Toolkit Hub`,
+            : activeToolDetail.id === 'chatgpt'
+              ? 'ChatGPT Guide: Features, Free Plan & Practical Tips | AI Toolkit Hub'
+              : `${activeToolDetail.name} — Features, Pricing Model & Alternatives | AI Toolkit Hub`,
         description:
           activeToolDetail.id === 'elevenlabs-studio'
             ? 'Explore ElevenLabs Studio for AI voiceovers, audiobooks, podcasts, and video audio. See how to start, key features, free-plan limits, and alternatives.'
-            : `${activeToolDetail.name}: ${activeToolDetail.tagline} Explore supported platforms, free-plan availability, limitations, and related ${activeToolDetail.category} tools.`,
+            : activeToolDetail.id === 'chatgpt'
+              ? 'Explore ChatGPT by OpenAI: practical uses, how to write better prompts, free-plan considerations, limitations, privacy tips, and official resources.'
+              : `${activeToolDetail.name}: ${activeToolDetail.tagline} Explore supported platforms, free-plan availability, limitations, and related ${activeToolDetail.category} tools.`,
         path: `/ai-tools/${activeToolDetail.id}`,
         breadcrumbs: crumbs,
         ogType: 'website' as const,
@@ -810,6 +814,74 @@ export default function App() {
                         className="text-sky-300 hover:text-sky-200 underline underline-offset-4"
                       >
                         Check current pricing
+                      </a>
+                    </p>
+                  </div>
+                </section>
+              )}
+
+              {activeToolDetail.id === 'chatgpt' && (
+                <section
+                  aria-labelledby="chatgpt-getting-started"
+                  className="space-y-5 border-t border-slate-800 pt-6"
+                >
+                  <div className="space-y-2">
+                    <h2
+                      id="chatgpt-getting-started"
+                      className="font-display text-xl font-bold text-white"
+                    >
+                      How to Get Started with ChatGPT
+                    </h2>
+                    <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+                      ChatGPT is a general-purpose AI assistant for exploring ideas, drafting content,
+                      learning new topics, and working through questions. Clear instructions and a
+                      quick review of its answers help you get more useful results.
+                    </p>
+                  </div>
+                  <ol className="list-decimal pl-5 space-y-3 text-sm text-slate-300 leading-relaxed">
+                    <li>
+                      <strong className="text-white">Describe your goal:</strong> Say what you want to
+                      accomplish, who the result is for, and any relevant context.
+                    </li>
+                    <li>
+                      <strong className="text-white">Specify the format:</strong> Ask for a checklist,
+                      table, outline, short explanation, draft, or step-by-step plan when a particular
+                      structure would help.
+                    </li>
+                    <li>
+                      <strong className="text-white">Refine the response:</strong> Give feedback, share
+                      missing context, and ask for a revision rather than restarting from scratch.
+                    </li>
+                    <li>
+                      <strong className="text-white">Verify important details:</strong> Check factual
+                      claims, calculations, citations, and advice against reliable sources before using
+                      them for consequential decisions.
+                    </li>
+                  </ol>
+                  <div className="rounded-xl border border-slate-800 bg-slate-900/70 p-4 space-y-2">
+                    <h3 className="text-sm font-semibold text-white">Tips for safer, better results</h3>
+                    <ul className="list-disc pl-5 space-y-1.5 text-sm text-slate-300">
+                      <li>Do not treat every answer as correct; AI can make mistakes or omit important context.</li>
+                      <li>Avoid entering passwords or unnecessary sensitive and confidential information.</li>
+                      <li>Free-plan access, model choices, and tool limits can change, so check current official plan details.</li>
+                    </ul>
+                    <p className="text-sm">
+                      <a
+                        href="https://help.openai.com/en/collections/3742473-chatgpt"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sky-300 hover:text-sky-200 underline underline-offset-4"
+                      >
+                        Read the official ChatGPT Help Center
+                      </a>
+                      <span className="text-slate-500"> · </span>
+                      <a
+                        href="https://openai.com/chatgpt/pricing/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sky-300 hover:text-sky-200 underline underline-offset-4"
+                      >
+                        Check current ChatGPT plans
                       </a>
                     </p>
                   </div>
